@@ -1,0 +1,12 @@
+[package]
+name = "apple-dev-tools-wrapper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap_lex = { version = "0.2.3", optional = true }
+
+[[bin]]
+name = "xcrun"
+path = "src/bin/xcrun.rs"
+required-features = ["clap_lex"]
